@@ -16,12 +16,12 @@ call print_string
 
 mov bx, KERNEL_OFFSET
 mov dh, 2 
-call disk_load
+call kernel_load
 
 call switch_32
 
 %include "boot/print_hex.asm"
-%include "boot/disk_load.asm"
+%include "boot/kernel_load.asm"
 %include "boot/print_string.asm"
 %include "boot/global_descriptor_table.asm"
 %include "boot/switch_32.asm"
@@ -32,7 +32,7 @@ BEGIN_PM:
 
 
 BOOT_DRIVE_NUMBER: db 0
-Real_Mode: db "Booting in Real Mode From Drive ", 0
+Real_Mode: db "Greeting!, Naskar's Bootloader Welcomes you -Reading from Drive ", 0
 MSG_PROT_MODE db "Entering 32-bit Protected Mode", 0
 NEW_LINE: db 0x0D, 0x0A, 0
 
