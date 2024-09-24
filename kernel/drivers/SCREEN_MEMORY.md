@@ -4,16 +4,24 @@ Video memory at `0xb8000` </br>
 - First Byte for character
 - Second Byte for attribute
 
-==Except for first memory reference==
+==0x03 Blue ForeGround==
 
 ```
 unsigned char *vidmem = (unsigned char *) 0xb8000;
 *(vidmem+0) = 'H';
-*(vidmem+2) = 0x03; // *(vidmem+1) is default attribute
+*(vidmem+1) = 0x03; 
 
-*(vidmem+3) = 'I';
-*(vidmem+4) = 0x03; 
+*(vidmem+2) = 'E';
+*(vidmem+3) = 0x03;
 
+*(vidmem+4) = 'L';
+*(vidmem+5) = 0x03;
+
+*(vidmem+6) = 'L';
+*(vidmem+7) = 0x03;
+
+*(vidmem+8) = 'O';
+*(vidmem+9) = 0x03;
 ```
 
 CRT controller for cursor using ports 
