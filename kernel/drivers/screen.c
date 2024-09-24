@@ -18,8 +18,8 @@ int get_cursor() {
 
 void set_char_at_video_memory(char character, int offset) {
     unsigned char *vidmem = (unsigned char *) VIDEO_ADDRESS;
-    vidmem[offset+1] = character;
-    vidmem[offset + 2] = WHITE_ON_BLACK;
+    vidmem[offset] = character;
+    vidmem[offset+1] = WHITE_ON_BLACK;
 }
 
 void print(char character) {
