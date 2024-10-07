@@ -4,7 +4,7 @@ gdt_null:               ; null descriptor
     dd 0x0 
     dd 0x0
     
-gdt_code:               ; the code segment descriptor
+gdt_code:               ; the code segment descriptor (0x08)
             
     dw 0xffff           ; Segment limit (lower 16 bits)
     dw 0x0              ; Base  (bits 0-15)
