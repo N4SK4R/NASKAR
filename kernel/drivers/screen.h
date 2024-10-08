@@ -14,6 +14,7 @@
 void set_cursor(int offset);
 int  get_cursor();
 void set_char_at_video_memory(char character, int offset);
-void print(char character);
+void print(char *string);
+
 
 #endif 
