@@ -23,6 +23,7 @@ image/os-image.img: image/boot_sector.bin image/kernel.bin
 
 image/boot_sector.bin : boot/boot_sector.asm
 
+	mkdir -p image
 	nasm $< -f bin -o $@
 
 image/kernel.bin: image/kernel_entry.o ${OBJ_FILES}
