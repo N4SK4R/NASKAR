@@ -15,7 +15,7 @@ mov si, NEW_LINE
 call print_string
 
 mov bx, KERNEL_OFFSET
-mov dh, 1 
+mov dh, 3
 call kernel_load
 
 call switch_32
@@ -33,9 +33,7 @@ BEGIN_PM:
 
 BOOT_DRIVE_NUMBER: db 0
 Real_Mode: db "Greeting!, Naskar's Bootloader Welcomes you -Reading from Drive ", 0
-MSG_PROT_MODE db "Entering 32-bit Protected Mode", 0
 NEW_LINE: db 0x0D, 0x0A, 0
-
 
 times 510-($-$$) db 0
 dw 0xaa55
