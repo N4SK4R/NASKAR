@@ -9,7 +9,7 @@ kernel_load:                           ; load DH sectors to ES:BX from drive DL
     mov cl, 0x02                       ; Start reading from sector 2
     int 0x13
 
-    jc disk_error      ; Jump if error (carry flag set)
+    jc disk_error                      ; Jump if error (carry flag set)
 
     pop dx
     cmp dh, al

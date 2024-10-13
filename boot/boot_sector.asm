@@ -15,7 +15,7 @@ mov si, NEW_LINE
 call print_string
 
 mov bx, KERNEL_OFFSET
-mov dh, 3
+mov dh, 4
 call kernel_load
 
 call switch_32
@@ -28,7 +28,6 @@ call switch_32
 
 BEGIN_PM:
     call KERNEL_OFFSET
-    jmp $
 
 
 BOOT_DRIVE_NUMBER: db 0
