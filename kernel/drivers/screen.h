@@ -1,7 +1,6 @@
 #ifndef SCREEN_H
 #define SCREEN_H
 
-#include "ports.h"
 #define VGA_INDEX_REGISTER 0x3d4
 #define VGA_DATA_REGISTER 0x3d5
 #define VGA_OFFSET_LOW 0x0f
@@ -15,6 +14,6 @@ void set_cursor(int offset);
 int  get_cursor();
 void set_char_at_video_memory(char character, int offset);
 void print(char *string);
-
+void print_backspace();
 
 #endif 
