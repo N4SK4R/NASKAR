@@ -1,5 +1,5 @@
 C_SOURCES = $(wildcard kernel/*.c kernel/cpu/*.c kernel/drivers/*.c )
-HEADERS   = $(wildcard kernel/drivers/*.h)
+HEADERS   = $(wildcard kernel/drivers/*.h kernel/cpu/*.h)
 OBJ_FILES = ${C_SOURCES:.c=.o}
 
 all: image/os-image.img
@@ -43,4 +43,4 @@ image/kernel.bin: boot/kernel_entry.o kernel/cpu/isr.o ${OBJ_FILES}
 
 clean:
 
-	rm  boot/*.o kernel/*.o kernel/drivers/*.o kernel/cpu/*.o image/*.bin
+	rm  boot/*.o kernel/*.o kernel/drivers/*.o kernel/cpu/*.o image/*.bin boot/*.bin
