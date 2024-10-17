@@ -1,3 +1,5 @@
-# Snake86
+```bash
+make
+```
 
 
