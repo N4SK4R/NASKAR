@@ -15,8 +15,23 @@ IDT_load:
     pop ebp
     ret
 
+
 global IRQ0
 global IRQ1
+global IRQ2
+global IRQ3
+global IRQ4
+global IRQ5
+global IRQ6
+global IRQ7
+global IRQ8
+global IRQ9
+global IRQ10
+global IRQ11
+global IRQ12
+global IRQ13
+global IRQ14
+global IRQ15
 
 IRQ0:
 	push byte 0
@@ -26,6 +41,76 @@ IRQ0:
 IRQ1:
 	push byte 1
 	push byte 33
+	jmp isr_common
+
+IRQ2:
+	push byte 2
+	push byte 34
+	jmp isr_common
+
+IRQ3:
+	push byte 3
+	push byte 35
+	jmp isr_common
+
+IRQ4:
+	push byte 4
+	push byte 36
+	jmp isr_common
+
+IRQ5:
+	push byte 5
+	push byte 37
+	jmp isr_common
+
+IRQ6:
+	push byte 6
+	push byte 38
+	jmp isr_common
+
+IRQ7:
+	push byte 7
+	push byte 39
+	jmp isr_common
+
+IRQ8:
+	push byte 8
+	push byte 40
+	jmp isr_common
+
+IRQ9:
+	push byte 9
+	push byte 41
+	jmp isr_common
+
+IRQ10:
+	push byte 10
+	push byte 42
+	jmp isr_common
+
+IRQ11:
+	push byte 11
+	push byte 43
+	jmp isr_common
+
+IRQ12:
+	push byte 12
+	push byte 44
+	jmp isr_common
+
+IRQ13:
+	push byte 13
+	push byte 45
+	jmp isr_common
+
+IRQ14:
+	push byte 14
+	push byte 46
+	jmp isr_common
+
+IRQ15:
+	push byte 15
+	push byte 47
 	jmp isr_common
 
 

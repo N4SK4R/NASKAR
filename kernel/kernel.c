@@ -9,8 +9,9 @@ void main()
     IDT_Initialize();
     ISR_Initialize();
 
-    __asm__("sti");
-    print("Home> ");
+    print("Oracle> ");
+    asm volatile("sti");
+    
 
 }
 

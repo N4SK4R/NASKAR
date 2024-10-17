@@ -37,6 +37,6 @@ void IDT_Initialize()
     port_byte_out(0xA1, 0x01);
 
     // OCW1
-    port_byte_out(0x21, 0x0);
-    port_byte_out(0xA1, 0x0);
+    port_byte_out(0x21, 0xFC); // 1111 1100 -> unmask IRQ0 (timer) and unmask IRQ1 (keyboard)
+    port_byte_out(0xA1, 0xFF);
 }
