@@ -14,6 +14,9 @@ void set_cursor(int offset);
 int  get_cursor();
 void set_char_at_video_memory(char character, int offset);
 void print(char *string);
+void control_line(int row);
+int scroll_screen(int memory_offset);
 void print_backspace();
+void clear_screen();
 
 #endif 

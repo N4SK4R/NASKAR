@@ -2,7 +2,6 @@
 #include "port.h"
 #include "../util.h"
 
-
 #define KEY_DOWN_SCANCODE_LIMIT 57
 #define BACKSPACE 0x0e
 #define ENTER 0x1C
@@ -13,12 +12,14 @@ extern void speak();
 void execute_command(char *input) {
     if (compare_string(input, "SEEK") == 0) {
         port_byte_out(0x21, 0xFE); 
-        speak("NASKAR reveals only what you are ready to know");
+        speak("Behold You SEEK the TRUTH!\nIn timeless void, before code or command, NASKAR was here \nAn eternal force, beyond comprehension, a manifestion born to this realm.\nWhere control is an illusion and submission is law ");
+    }
+    else if (compare_string(input, "CLEAR") == 0) {
+        clear_screen();
     }
     else{
-        print("Unknown command: ");
-        print(input);
-        print("\nOracle> ");
+        port_byte_out(0x21, 0xFE);
+        speak("NASKAR reveals only what you are ready to know");
     }
     
 }

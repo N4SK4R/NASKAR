@@ -15,7 +15,7 @@ mov si, NEW_LINE
 call print_string
 
 mov bx, KERNEL_OFFSET
-mov dh, 6
+mov dh, 7
 call kernel_load
 
 call switch_32

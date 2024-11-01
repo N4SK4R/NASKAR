@@ -1,7 +1,7 @@
 global _start:
 [bits 32]
-[extern main]
+[extern NASKAR]
 
 _start:
-    call main
+    call NASKAR
     jmp $
