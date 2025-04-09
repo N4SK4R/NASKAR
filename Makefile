@@ -41,6 +41,10 @@ image/kernel.bin: boot/kernel_entry.o kernel/cpu/isr.o ${OBJ_FILES}
 	
 	i386-elf-gcc -g -m32 -ffreestanding -c $< -o $@
 
+vbox:
+
+	qemu-img convert -f raw -O vdi image/os-image.img image/os.vdi
+
 clean:
 
 	rm  boot/*.o kernel/*.o kernel/drivers/*.o kernel/cpu/*.o image/*.bin boot/*.bin
