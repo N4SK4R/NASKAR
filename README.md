@@ -4,7 +4,7 @@ Use the Bash script to set up a cross-compilation environment for building a 32-
 
 - A GCC cross-compiler targeting `i386-elf`
 - `nasm` for assembling low-level x86 code
-- `qemu-system-x86_64` for running the compiled OS in a virtual machine
+- `qemu-system-x86_64` for running the compiled OS in an emulator
 
 ---
 
@@ -30,7 +30,7 @@ sudo apt install -y qemu-system-x86
 ![OS](docs/os.gif) 
 
 
-`make vbox` to run the .vdi file on vbox
+`make vbox` to run the .vdi file on vbox virtual machine
 
 `sudo dd if=os.img of=/dev/sdc bs=512` for legacy boot on REAL HARDWARE
 
