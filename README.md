@@ -26,12 +26,10 @@ sudo apt install -y nasm
 sudo apt install -y qemu-system-x86
 ```
 
-
-![OS](docs/os.gif) 
-
+![PC](docs/legacyBoot.gif) 
 
 `make vbox` to run the .vdi file on vbox virtual machine
 
 `sudo dd if=os.img of=/dev/sdc bs=512` for legacy boot on REAL HARDWARE
 
-![PC](docs/legacyBoot.gif) 
+
