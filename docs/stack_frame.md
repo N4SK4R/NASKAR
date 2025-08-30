@@ -1,7 +1,7 @@
 ### Function Compilation in C
 
 ## Stack Frame
-Stack Frame is created on top of the function that called the new function
+Stack Frame is created on top of a function
 
 - The caller pushes the arguments to the function onto the stack, from right to left.
 - The caller pushes the return address onto the stack.
