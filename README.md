@@ -26,7 +26,6 @@ sudo apt install -y nasm
 sudo apt install -y qemu-system-x86
 ```
 ![PC](docs/boot.gif) 
-<img width="960" height="544" alt="boot" src="https://github.com/user-attachments/assets/8b9e6e7f-ae62-448e-b111-c7d43ca57135" />
 
 
 `make vbox` to run the .vdi file on vbox virtual machine
