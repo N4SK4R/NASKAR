@@ -1,3 +1,4 @@
+<img width="960" height="544" alt="boot" src="https://github.com/user-attachments/assets/b42cbad6-39d5-4ac6-a295-748b0ce4d152" />
 # 🛠️ i386 Toolchain + OS Build Environment
 
 Use the Bash script to set up a cross-compilation environment for building a 32-bit i386 operating system. It includes:
@@ -25,8 +26,9 @@ echo 'export PATH="/usr/local/i386-elf/bin:$PATH"' >> ~/.bashrc
 sudo apt install -y nasm
 sudo apt install -y qemu-system-x86
 ```
+![PC](docs/boot.gif) 
+<img width="960" height="544" alt="boot" src="https://github.com/user-attachments/assets/8b9e6e7f-ae62-448e-b111-c7d43ca57135" />
 
-![PC](docs/legacyBoot.gif) 
 
 `make vbox` to run the .vdi file on vbox virtual machine
 
